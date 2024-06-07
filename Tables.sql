@@ -2,7 +2,6 @@ CREATE TABLE Alumnos (
     alumno_id SERIAL PRIMARY KEY NOT NULL,
     alumno_nombre1 VARCHAR(30) NOT NULL,
     alumno_nombre2 VARCHAR(30) NOT NULL,
-    alumno_nombre3 VARCHAR(30),
     alumno_apellido1 VARCHAR(30) NOT NULL,
     alumno_apellido2 VARCHAR(30),
     alumno_grado VARCHAR(30) NOT NULL,
