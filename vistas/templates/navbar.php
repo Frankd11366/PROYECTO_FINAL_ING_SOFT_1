@@ -1,7 +1,7 @@
 <div id="navbar">
     <nav class="navbar fixed-top navbar-expand-lg bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../vistas/alumnos/index.php"><img src="../../src/images/apple.png" alt="Logo" width="30" height="30">ALUMNOS</a>
+            <a class="navbar-brand" href="../../vistas/alumnos/index.php"><img src="../../src/images/progra.png" alt="Logo" width="80" height="80"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
 
             </button>
