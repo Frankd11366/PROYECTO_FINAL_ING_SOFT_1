@@ -22,7 +22,7 @@ class Alumnos extends Conexion{
         $this->alumno_grado = $args['alumno_grado'] ?? '';
         $this->alumno_arma_o_servicio = $args['alumno_arma_o_servicio'] ?? '';
         $this->alumno_nacionalidad = $args['alumno_nacionalidad'] ?? '';
-        $this->alumno_situacion = $args['alumno_situacion'] ?? 1;
+        $this->alumno_situacion = $args['alumno_situacion'] ?? null;
 
        
 
