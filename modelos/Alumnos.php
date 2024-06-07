@@ -31,8 +31,42 @@ class Alumnos extends Conexion{
       public function guardar(){
         $sql = "INSERT into alumnos (alumno_nombre1, alumno_nombre2, alumno_apellido1, alumno_apellido2, alumno_grado, alumno_arma_o_servicio, alumno_nacionalidad) values ('$this->alumno_nombre1', '$this->alumno_nombre2', '$this->alumno_apellido1', '$this->alumno_apellido2', '$this->alumno_grado', '$this->alumno_arma_o_servicio', '$this->alumno_nacionalidad')";
         $resultado = $this->ejecutar($sql);
-        return $resultado; 
+        return $resultado;
+    }
+
+
+
+    // METODO PARA CONSULTAR
+
+    public static function buscarTodos(...$columnas){
+        $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
+        $sql = "SELECT $cols FROM alumnos where alumnos_situacion = 1 ";
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+
+    public function buscar(...$columnas){
+        $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
+        $sql = "SELECT $cols FROM alumnos where alumnos_situacion = 1 ";
+
+
+        if($this->alumno_nombre1 != ''){
+            $sql .= " AND alumno_nombre1 like '%$this->alumno_nombre1%' ";
+        }
+        if($this->alumno_apellido1 != ''){
+            $sql .= " AND alumno_apellido1 like'%$this->alumno_apellido1%' ";
+        }
+
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+    public function buscarId($id){
+        $sql = " SELECT * FROM alumnos WHERE alumno_situacion = 1 AND alumno_id = '$id' ";
+        $resultado = array_shift( self::servir($sql)) ;
+
+        return $resultado;
     }
 
 }
-

@@ -12,7 +12,7 @@ abstract class Conexion{
             
             self::$conexion = new PDO("informix:host=host.docker.internal; service=9088;database=escuela_de_informatica_rivas; server=informix; protocol=onsoctcp;EnableScrollableCursors=1", "informix", "in4mix");
             self::$conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "conexion exitosa";
+            // echo "conexion exitosa";
         } catch (PDOException $e) {
             echo "No hay conexion a la BD";
             echo "<br>";
@@ -40,22 +40,20 @@ abstract class Conexion{
         ];
         
     }
+    // METODO PARA CONSULTAR INFORMACION
+    public function servir($sql){
+        $conexion = self::connectar();
+        $sentencia = $conexion->prepare($sql);
+        $sentencia->execute();
+        $data = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+        $datos = [];
+        foreach ($data as $k => $v) {
+            $datos[] = array_change_key_case($v, CASE_LOWER);
+        }
+        self::$conexion = null;
+
+        return $datos;
+        
+    }
 
 }
-
-//     // METODO PARA CONSULTAR INFORMACION
-//     public function servir($sql){
-//         $conexion = self::connectar();
-//         $sentencia = $conexion->prepare($sql);
-//         $sentencia->execute();
-//         $data = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-//         $datos = [];
-//         foreach ($data as $k => $v) {
-//             $datos[] = array_change_key_case($v, CASE_LOWER);
-//         }
-//         self::$conexion = null;
-
-//         return $datos;
-        
-//     }
-// }
