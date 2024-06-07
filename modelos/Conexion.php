@@ -25,28 +25,23 @@ abstract class Conexion{
 
     }
 
-}
+     // METODO PARA EJECUTAR SENTENCIAS SQL
 
+     public function ejecutar($sql){
+        $conexion = self::connectar();
+        $sentencia = $conexion->prepare($sql);
+        $resultado = $sentencia->execute();
+        $idInsertado = $conexion->lastInsertId();
+        self::$conexion = null;
 
-
-
-
-
-    // METODO PARA EJECUTAR SENTENCIAS SQL
-
-//     public function ejecutar($sql){
-//         $conexion = self::connectar();
-//         $sentencia = $conexion->prepare($sql);
-//         $resultado = $sentencia->execute();
-//         $idInsertado = $conexion->lastInsertId();
-//         self::$conexion = null;
-
-//         return [
-//             "resultado" => $resultado,
-//             "id" => $idInsertado
-//         ];
+        return [
+            "resultado" => $resultado,
+            "id" => $idInsertado
+        ];
         
-//     }
+    }
+
+}
 
 //     // METODO PARA CONSULTAR INFORMACION
 //     public function servir($sql){
