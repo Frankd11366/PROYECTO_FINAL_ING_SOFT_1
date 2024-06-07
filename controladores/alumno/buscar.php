@@ -2,13 +2,14 @@
     // ini_set('display_errors', '1');
     // ini_set('display_startup_errors', '1');
     // error_reporting(E_ALL);
+
     require '../../modelos/Alumnos.php';
 
     // consulta
     try {
         // var_dump($_GET);
-        $_GET['alumno_nombre1'] = htmlspecialchars( $_GET['alumno_nombre1']);
-        $_GET['alumno_apellido1'] = htmlspecialchars( $_GET['alumno_apellido2']);
+        $_GET['alumno_nombre1'] = htmlspecialchars($_GET['alumno_nombre1']);
+        $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido2']);
     
         $objAlumno = new Alumnos($_GET);
         $alumnos = $objAlumno->buscar();
@@ -17,7 +18,7 @@
             'datos' => $alumnos,
             'codigo' => 1
         ];
-        // var_dump($alumnos);
+        var_dump($alumnos);
         
     } catch (Exception $e) {
         $resultado = [

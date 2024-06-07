@@ -40,7 +40,7 @@ class Alumnos extends Conexion{
 
     public static function buscarTodos(...$columnas){
         $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT $cols FROM alumnos where alumnos_situacion = 1 ";
+        $sql = "SELECT $cols FROM Alumnos where alumnos_situacion = 1 ";
         $resultado = self::servir($sql);
         return $resultado;
     }
@@ -48,7 +48,7 @@ class Alumnos extends Conexion{
 
     public function buscar(...$columnas){
         $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT $cols FROM alumnos where alumnos_situacion = 1 ";
+        $sql = "SELECT $cols FROM Alumnos where alumnos_situacion = 1 ";
 
 
         if($this->alumno_nombre1 != ''){
