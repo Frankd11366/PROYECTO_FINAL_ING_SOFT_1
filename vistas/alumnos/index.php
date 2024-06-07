@@ -1,7 +1,9 @@
-<?php
+<?php 
 
+include_once '../../vistas/templates/header.php'; ?>
 
-$conexion='usted tiene conexion';
+<h1>BIENVENIDO A LA ESCUELA DE INFORMATICA Y CIBERDEFENSA</h1>
 
-?>
+<?php include_once '../../vistas/templates/footer.php'; ?>
+
    
