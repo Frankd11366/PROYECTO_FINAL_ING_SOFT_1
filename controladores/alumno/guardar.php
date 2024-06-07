@@ -12,7 +12,7 @@ $_POST['alumno_arma_o_servicio'] = htmlspecialchars($_POST['alumno_arma_o_servic
 $_POST['alumno_nacionalidad'] = htmlspecialchars($_POST['alumno_nacionalidad']);
 
 
-if ($_POST['alumno_nombre1'] == ''|| $_POST['alumno_nombre2'] == '' || $_POST['alumno_apellido1'] == '' || $_POST['alumno_apellido2'] == '' || $_POST['alumno_grado'] == '' || $_POST['alumno_arma_o_servicio'] == '' || $_POST['alumno_nacionalidad'] == '') {
+if ($_POST['alumno_nombre1'] == '' || $_POST['alumno_nombre2'] == '' || $_POST['alumno_apellido1'] == '' || $_POST['alumno_apellido2'] == '' || $_POST['alumno_grado'] == '' || $_POST['alumno_arma_o_servicio'] == '' || $_POST['alumno_nacionalidad'] == '') {
     // ALERTA PARA VALIDAR DATOS
     $resultado = [
         'mensaje' => 'DEBE VALIDAR LOS DATOS',
@@ -56,7 +56,7 @@ include_once '../../vistas/templates/header.php'; ?>
 </div>
 <div class="row justify-content-center">
     <div class="col-lg-6">
-        <a href="../../vistas/cliente/index.php" class="btn btn-primary w-100">Volver al formulario</a>
+        <a href="../../vistas/alumnos/index2.php" class="btn btn-primary w-100">Volver al formulario</a>
     </div>
 </div>
 

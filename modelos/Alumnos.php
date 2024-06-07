@@ -22,15 +22,14 @@ class Alumnos extends Conexion{
         $this->alumno_grado = $args['alumno_grado'] ?? '';
         $this->alumno_arma_o_servicio = $args['alumno_arma_o_servicio'] ?? '';
         $this->alumno_nacionalidad = $args['alumno_nacionalidad'] ?? '';
-        $this->alumno_situacion = $args['alumno_situacion'] ?? '';
+        $this->alumno_situacion = $args['alumno_situacion'] ?? 1;
+
+       
 
     }
         // INSERTAR
       public function guardar(){
-        $sql = "INSERT into cliente (alumno_nombre1, alumno_nombre2, alumno_apellido1, 
-        alumno_apellido2, alumno_grado, alumno_arma_o_servicio, alumno_nacionalidad) values ('$this->alumno_nombre1',
-        '$this->alumno_nombre2', '$this->alumno_apellido1', '$this->alumno_apellido2' 
-        '$this->alumno_grado', '$this->alumno_arma_o_servicio', '$this->alumno_nacionalidad',)";
+        $sql = "INSERT into alumnos (alumno_nombre1, alumno_nombre2, alumno_apellido1, alumno_apellido2, alumno_grado, alumno_arma_o_servicio, alumno_nacionalidad) values ('$this->alumno_nombre1', '$this->alumno_nombre2', '$this->alumno_apellido1', '$this->alumno_apellido2', '$this->alumno_grado', '$this->alumno_arma_o_servicio', '$this->alumno_nacionalidad')";
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
