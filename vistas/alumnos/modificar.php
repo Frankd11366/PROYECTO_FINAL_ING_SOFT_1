@@ -1,10 +1,16 @@
 <?php
 
-include_once '../../vistas/templates/header.php'; ?>
+require '../../modelos/Alumnos.php';
 
-<h1 class="text-center">FORMULARIO DE ALUMNOS</h1>
+$_GET['alumno_id'] = filter_var(base64_decode($_GET['alumno_id']), FILTER_SANITIZE_NUMBER_INT);
+$alumno = new Alumnos();
+
+$AlumnoRegistrado = $alumno->buscarId($_GET['alumno_id']);
+
+include_once '../../vistas/templates/header.php'; ?>
+<h1 class="text-center">MODIFICAR DATOS DEL ALUMNO</h1>
 <div class="row justify-content-center">
-    <form action="../../controladores/alumno/guardar.php" method="POST" class="border bg-light shadow rounded p-2">
+    <form action="../../controladores/alumno/modificar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-6">
         <div class="row">
             <div class="col-4">
                 <label for="alumno_nombre1">PRIMER NOMBRE</label>

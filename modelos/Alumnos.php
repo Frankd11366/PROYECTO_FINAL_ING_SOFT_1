@@ -34,8 +34,6 @@ class Alumnos extends Conexion{
         return $resultado;
     }
 
-
-
     // METODO PARA CONSULTAR
 
     public function buscar(...$columnas){
@@ -54,11 +52,18 @@ class Alumnos extends Conexion{
         return $resultado;
     }
 
+    //MODIFICAR DATOS
+
+    public function modificar(){
+        $sql = "UPDATE Alumnos SET alumno_nombre1 = '$this->alumno_nombre1', alumno_nombre2 = '$this->alumno_nombre2', alumno_apellido1 = '$this->alumno_apellido1', alumno_apellido2 = '$this->alumno_apellido2', alumno_grado = '$this->alumno_grado', alumno_arma_o_servicio = '$this->alumno_arma_o_servicio', alumno_nacionalidad = '$this->alumno_nacionalidad' WHERE alumno_id = $this->alumno_id ";
+        $resultado = $this->ejecutar($sql);
+        return $resultado; 
+    }
+    //BUSCAR EL ID PARA PODER MODIFICAR LOS DATOS
     public function buscarId($id){
         $sql = " SELECT * FROM alumnos WHERE alumno_situacion = 1 AND alumno_id = '$id' ";
         $resultado = array_shift( self::servir($sql)) ;
 
         return $resultado;
     }
-
 }

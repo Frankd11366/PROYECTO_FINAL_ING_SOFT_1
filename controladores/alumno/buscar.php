@@ -77,7 +77,7 @@
                                         Acciones
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="../../vistas/cliente/modificar.php?cli_id=<?= base64_encode($cliente['cli_id'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
+                                        <li><a class="dropdown-item" href="../../vistas/alumnos/modificar.php?alumno_id=<?= base64_encode($alumno['alumno_id'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
                                         <li><a class="dropdown-item" href="../../controladores/cliente/eliminar.php?cli_id=<?= base64_encode($cliente['cli_id'])?>"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                     </ul>
                                 </div>
