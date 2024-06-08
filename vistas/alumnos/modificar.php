@@ -44,7 +44,7 @@ include_once '../../vistas/templates/header.php'; ?>
             <div class="row mb-3">
                 <div class="col">
                     <label for="alumno_nacionalidad">NACIONALIDAD</label>
-                    <input type="text" name="alumno_nacionalidad" id="alumno_nacionalidad" class="form-control" required value="<?= $ClienteRegistrado['alumno_nacionalidad'] ?>">
+                    <input type="text" name="alumno_nacionalidad" id="alumno_nacionalidad" class="form-control" required value="<?= $AlumnoRegistrado['alumno_nacionalidad'] ?>">
                 </div>
             </div>
         </div>

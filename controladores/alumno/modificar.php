@@ -31,7 +31,7 @@ if ($_POST['alumno_nombre1'] == '' || $_POST['alumno_nombre2'] == '' || $_POST['
         $modificar = $alumno->modificar();
 
         $resultado = [
-            'mensaje' => 'CLIENTE MODIFICADO CORRECTAMENTE',
+            'mensaje' => 'ALUMNO MODIFICADO CORRECTAMENTE',
             'codigo' => 1
         ];
     } catch (PDOException $pe) {
@@ -62,7 +62,7 @@ include_once '../../vistas/templates/header.php'; ?>
 </div>
 <div class="row justify-content-center">
     <div class="col-lg-6">
-        <a href="../../controladores/cliente/buscar.php" class="btn btn-primary w-100">Regresar</a>
+        <a href="../../controladores/alumno/buscar.php" class="btn btn-primary w-100">Regresar</a>
     </div>
 </div>
 
