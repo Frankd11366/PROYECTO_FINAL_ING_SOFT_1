@@ -2,12 +2,12 @@
 
     require '../../modelos/Cliente.php';
     
-    $_GET['alumno_id'] = filter_var( base64_decode($_GET['cli_id']), FILTER_SANITIZE_NUMBER_INT);
-    $cliente = new Cliente($_GET);
+    $_GET['alumno_id'] = filter_var( base64_decode($_GET['alumno_id']), FILTER_SANITIZE_NUMBER_INT);
+    $alumno = new Alumnos($_GET);
     
     try{
         
-        $eliminar = $cliente->eliminar();
+        $eliminar = $alumno->eliminar();
         $resultado = [
             'mensaje' => 'CLIENTE ELIMINADO CORRECTAMENTE',
             'codigo' => 1
@@ -43,7 +43,7 @@ include_once '../../vistas/templates/header.php'; ?>
 </div>
 <div class="row justify-content-center">
     <div class="col-lg-6">
-        <a href="../../controladores/cliente/buscar.php" class="btn btn-primary w-100">Volver a los resultados</a>
+        <a href="../../controladores/alumno/buscar.php" class="btn btn-primary w-100">Volver a los resultados</a>
     </div>
 </div>
 

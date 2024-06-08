@@ -8,7 +8,7 @@ $alumno = new Alumnos();
 $AlumnoRegistrado = $alumno->buscarId($_GET['alumno_id']);
 
 include_once '../../vistas/templates/header.php'; ?>
-<h1 class="text-center">MODIFICAR CLIENTE</h1>
+<h1 class="text-center">MODIFICAR DATOS DEL ALUMNO</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/alumno/modificar.php" method="POST" class="border bg-light shadow rounded p-2">
         <div class="row mb-3">
