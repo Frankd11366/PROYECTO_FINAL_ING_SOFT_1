@@ -38,14 +38,6 @@ class Alumnos extends Conexion{
 
     // METODO PARA CONSULTAR
 
-    public static function buscarTodos(...$columnas){
-        $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT $cols FROM Alumnos where alumnos_situacion = 1 ";
-        $resultado = self::servir($sql);
-        return $resultado;
-    }
-
-
     public function buscar(...$columnas){
         $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
         $sql = "SELECT $cols FROM Alumnos where alumnos_situacion = 1 ";

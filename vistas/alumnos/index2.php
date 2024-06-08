@@ -54,7 +54,7 @@ include_once '../../vistas/templates/header.php'; ?>
                 </select>
             </div>
         </div>
-        <div class="row">
+        <div class="row m-5">
             <div class="col"></div>
             <div class="col">
                 <label for="alumno_nacionalidad">NACIONALIDAD</label>
@@ -68,7 +68,7 @@ include_once '../../vistas/templates/header.php'; ?>
                 <button type="submit" class="btn btn-success w-100">GUARDAR</button>
             </div>
             <div class="col">
-                <a href="../../controladores/alumno/buscar.php" class="btn btn-primary w-100">BUSCAR</a>
+                <a href="../../vistas/alumnos/buscar.php" class="btn btn-primary w-100">BUSCAR</a>
             </div>
         </div>
     </form>

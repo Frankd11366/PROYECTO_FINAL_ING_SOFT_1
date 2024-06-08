@@ -7,9 +7,10 @@
 
     // consulta
     try {
-        // var_dump($_GET);
+        var_dump($_GET);
         $_GET['alumno_nombre1'] = htmlspecialchars($_GET['alumno_nombre1']);
         $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido2']);
+        var_dump('alumno_nombre1');
     
         $objAlumno = new Alumnos($_GET);
         $alumnos = $objAlumno->buscar();
@@ -41,7 +42,7 @@
     </div>
     <div class="row mb-4 justify-content-center">
         <div class="col-lg-6">
-            <a href="../../vistas/cliente/buscar.php" class="btn btn-primary w-100">Volver al formulario de busqueda</a>
+            <a href="../../vistas/alumnos/buscar.php" class="btn btn-primary w-100">Volver al formulario de busqueda</a>
         </div>
     </div>
     <h1 class="text-center">Listado de Alumnos</h1>

@@ -22,7 +22,7 @@
     body {
         background-image: url(/src/images/background.jpg);
         font-family: "Anton";
-        font-size: 20px;
+        font-size: 25px;
         text-align: center;
         padding: 30px;
     }
