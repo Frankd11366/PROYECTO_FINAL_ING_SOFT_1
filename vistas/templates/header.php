@@ -9,27 +9,23 @@
     <link rel="shortcut icon" href="../../src/images/progra.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <title>ESCUELA DE INFORMATICA</title>
 </head>
 
 <style>
+    #navbar {
+        font-family: "Anton";
+        font-size: 30px;
+    }
 
-#navbar{
-    font-family: "Bebas Neue";
-    font-size: 30px;
-}
-
-body{
-    background-image: url(/src/images/background.jpg);
-    font-family: "Bebas Neue";
-    font-size: 50px;
-    text-align: center;
-    padding: 30px;
-}
-
-
-
+    body {
+        background-image: url(/src/images/background.jpg);
+        font-family: "Anton";
+        font-size: 20px;
+        text-align: center;
+        padding: 30px;
+    }
 </style>
 
 <body>
