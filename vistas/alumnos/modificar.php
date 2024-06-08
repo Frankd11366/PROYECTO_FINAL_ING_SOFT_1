@@ -35,11 +35,33 @@ include_once '../../vistas/templates/header.php'; ?>
             </div>
             <div class="col-4">
                 <label for="alumno_grado">GRADO</label>
-                <input type="text" name="alumno_grado" id="alumno_grado" class="form-control" required value="<?= $AlumnoRegistrado['alumno_grado'] ?>">
+                <br>
+                <select name="alumno_grado" id="alumno_grado">
+                    <option><?= $AlumnoRegistrado['alumno_grado']?></option>
+                    <option value="Subteniente">Subteniente</option>
+                    <option value="Teniente">Teniente</option>
+                    <option value="Alferes de Fragata">Alferes de Fragata</option>
+                    <option value="Alferes de Navio">Alferes de Navio</option>
+                </select>
             </div>
             <div class="col-4">
                 <label for="alumno_arma_o_servicio">ARMA O SERVICIO</label>
-                <input type="text" name="alumno_arma_o_servicio" id="alumno_arma_o_servicio" class="form-control" required value="<?= $AlumnoRegistrado['alumno_arma_o_servicio'] ?>">
+                <br>
+                <select name="alumno_arma_o_servicio" id="alumno_arma_o_servicio">
+                    <option><?= $AlumnoRegistrado['alumno_arma_o_servicio'] ?></option>
+                    <option value="Infantería">Infantería</option>
+                    <option value="Artillería">Artillería</option>
+                    <option value="Caballería">Caballería</option>
+                    <option value="Ingenieros">Ingenieros</option>
+                    <option value="Aviación">Aviación</option>
+                    <option value="Marina">Marina</option>
+                    <option value="Transmisiones Militares">Transmisiones Militares</option>
+                    <option value="Material de Guerra">Material de Guerra</option>
+                    <option value="Policia Militar">Policia Militar</option>
+                    <option value="Intendencia">Intendencia</option>
+                    <option value="Sanidad MIlitar">Sanidad MIlitar</option>
+                </select>
+                
             </div>
             <div class="row mb-3">
                 <div class="col">
@@ -55,7 +77,7 @@ include_once '../../vistas/templates/header.php'; ?>
         </div>
         <div class="row">
             <div class="col">
-                <a href="../../controladores/cliente/buscar.php" class="btn btn-secondary w-100">Cancelar</a>
+                <a href="../../controladores/alumno/buscar.php" class="btn btn-secondary w-100">Cancelar</a>
             </div>
         </div>
     </form>

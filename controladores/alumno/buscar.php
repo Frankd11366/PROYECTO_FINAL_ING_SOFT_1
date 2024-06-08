@@ -45,7 +45,7 @@
     </div>
     <h1 class="text-center">Listado de Alumnos</h1>
     <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -57,6 +57,7 @@
                         <th>Grado</th>
                         <th>Arma o Servicio</th>
                         <th>Nacionalidad</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
