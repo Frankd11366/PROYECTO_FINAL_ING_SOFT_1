@@ -15,8 +15,8 @@
                             <i class="bi bi-file-person me-2"></i>ALUMNOS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-plus-circle me-2"></i>CREAR</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/alumnos/index2.php"><i class="bi bi-plus-circle me-2"></i>CREAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/alumnos/buscar.php"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
                         </ul>
                     </li>
             </div>

@@ -68,11 +68,10 @@ class Alumnos extends Conexion{
     }
 
     public function eliminar(){
-        $sql = "DELETE FROM alumnos WHERE alumno_id = $this->alumno_id ";
+        // $sql = "DELETE FROM productos WHERE prod_id = $this->prod_id ";
 
-        echo $sql;
-        $sql = "UPDATE alumnos SET alumno_id = 0 WHERE alumno_id = $this->alumno_id ";
-        echo $sql;
+        // echo $sql;
+        $sql = "UPDATE alumnos SET alumno_situacion = 0 WHERE alumno_id = $this->alumno_id ";
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
