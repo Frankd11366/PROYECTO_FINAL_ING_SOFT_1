@@ -7,10 +7,9 @@
 
     // consulta
     try {
-        var_dump($_GET);
+        // var_dump($_GET);
         $_GET['alumno_nombre1'] = htmlspecialchars($_GET['alumno_nombre1']);
         $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido2']);
-        var_dump('alumno_nombre1');
     
         $objAlumno = new Alumnos($_GET);
         $alumnos = $objAlumno->buscar();
@@ -19,7 +18,6 @@
             'datos' => $alumnos,
             'codigo' => 1
         ];
-        var_dump($alumnos);
         
     } catch (Exception $e) {
         $resultado = [

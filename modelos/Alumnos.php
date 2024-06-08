@@ -39,8 +39,8 @@ class Alumnos extends Conexion{
     // METODO PARA CONSULTAR
 
     public function buscar(...$columnas){
-        $cols = count($columnas) > 0 ? implode(',', $columnas) : '*';
-        $sql = "SELECT $cols FROM Alumnos where alumnos_situacion = 1 ";
+        $colums = count($columnas) > 0 ? implode(',', $columnas) : '*';
+        $sql = "SELECT $colums FROM Alumnos where alumno_situacion = 1 ";
 
 
         if($this->alumno_nombre1 != ''){
