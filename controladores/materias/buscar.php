@@ -66,7 +66,7 @@
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="../../vistas/materias/modificar.php?materia_id=<?= base64_encode($materia['materia_id'])?>"><i class="bi bi-pencil-square me-2"></i>Modificar</a></li>
-                                        <li><a class="dropdown-item" href="../../controladores/alumno/eliminar.php?alumno_id=<?= base64_encode($alumno['alumno_id'])?>"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
+                                        <li><a class="dropdown-item" href="../../controladores/materias/eliminar.php?materia_id=<?= base64_encode($materia['materia_id'])?>"><i class="bi bi-trash me-2"></i>Eliminar</a></li>
                                     </ul>
                                 </div>
 

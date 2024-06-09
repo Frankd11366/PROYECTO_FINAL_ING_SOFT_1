@@ -27,7 +27,7 @@ include_once '../../vistas/templates/header.php'; ?>
         </div>
         <div class="row">
             <div class="col">
-                <a href="../../controladores/alumno/buscar.php" class="btn btn-secondary w-100">Cancelar</a>
+                <a href="../../controladores/materias/buscar.php" class="btn btn-secondary w-100">Cancelar</a>
             </div>
         </div>
     </form>
