@@ -1,5 +1,5 @@
 <?php
-require 'Conexion.php';
+require_once 'Conexion.php';
 
 class Alumnos extends Conexion{
     public $alumno_id;
@@ -63,7 +63,6 @@ class Alumnos extends Conexion{
     public function buscarId($id){
         $sql = " SELECT * FROM alumnos WHERE alumno_situacion = 1 AND alumno_id = '$id' ";
         $resultado = array_shift( self::servir($sql)) ;
-
         return $resultado;
     }
 

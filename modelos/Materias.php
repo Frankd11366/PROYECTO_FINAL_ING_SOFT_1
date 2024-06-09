@@ -1,5 +1,5 @@
 <?php
-require 'Conexion.php';
+require_once 'Conexion.php';
 
 class Materias extends Conexion{
     public $materia_id;
@@ -31,6 +31,12 @@ class Materias extends Conexion{
             $sql .= " AND materia_nombre like '%$this->materia_nombre%' ";
         }
 
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
+
+    public function mostrarMaterias(){
+        $sql ="SELECT * FROM Materias where materia_situacion = 1";
         $resultado = self::servir($sql);
         return $resultado;
     }

@@ -14,14 +14,15 @@ CREATE TABLE Materias (
     materia_id SERIAL PRIMARY KEY NOT NULL,
     materia_nombre VARCHAR(50) NOT NULL,
     materia_situacion SMALLINT DEFAULT 1
+
 );
 
 CREATE TABLE Notas (
-    nota_id INT PRIMARY KEY NOT NULL,
-    alumno_id INT,
-    materia_id INT,
+    nota_id SERIAL PRIMARY KEY NOT NULL,
+    nota_alumno_id INT,
+    nota_materia_id INT,
     nota DECIMAL,
-    nota_situacion SMALLINT DEFAULT 1
-    FOREIGN KEY (alumno_id) REFERENCES Alumnos(alumno_id),
-    FOREIGN KEY (materia_id) REFERENCES Materias(materia_id)
+    nota_situacion SMALLINT DEFAULT 1,
+    FOREIGN KEY (nota_alumno_id) REFERENCES Alumnos(alumno_id),
+    FOREIGN KEY (nota_materia_id) REFERENCES Materias(materia_id)
 );

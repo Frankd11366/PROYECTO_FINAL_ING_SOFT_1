@@ -33,7 +33,7 @@
                             <i class="bi bi-mortarboard-fill"></i></i>NOTAS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href=""><i class="bi bi-journal-plus"></i></i>VER NOTAS</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/notas/index.php"><i class="bi bi-journal-plus"></i></i>ASIGNAR NOTAS</a></li>
                         </ul>
                     </li>
             </div>
