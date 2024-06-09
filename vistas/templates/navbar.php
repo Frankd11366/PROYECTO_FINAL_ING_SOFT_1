@@ -15,8 +15,25 @@
                             <i class="bi bi-file-person me-2"></i>ALUMNOS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../vistas/alumnos/index2.php"><i class="bi bi-plus-circle me-2"></i>CREAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/alumnos/index2.php"><i class="bi bi-person-plus-fill"></i></i> CREAR</a></li>
                             <li><a class="dropdown-item" href="../../vistas/alumnos/buscar.php"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-journals"></i></i>MATERIAS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../../vistas/materias/formulario.php"><i class="bi bi-journal-plus"></i></i>CREAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/materias/buscar.php"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-mortarboard-fill"></i></i>NOTAS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href=""><i class="bi bi-journal-plus"></i></i>VER NOTAS</a></li>
                         </ul>
                     </li>
             </div>

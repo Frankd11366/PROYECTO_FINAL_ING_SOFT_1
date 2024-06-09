@@ -12,7 +12,8 @@ CREATE TABLE Alumnos (
 
 CREATE TABLE Materias (
     materia_id SERIAL PRIMARY KEY NOT NULL,
-    materia_nombre VARCHAR(50) NOT NULL
+    materia_nombre VARCHAR(50) NOT NULL,
+    materia_situacion SMALLINT DEFAULT 1
 );
 
 CREATE TABLE Notas (
@@ -20,6 +21,7 @@ CREATE TABLE Notas (
     alumno_id INT,
     materia_id INT,
     nota DECIMAL,
+    nota_situacion SMALLINT DEFAULT 1
     FOREIGN KEY (alumno_id) REFERENCES Alumnos(alumno_id),
     FOREIGN KEY (materia_id) REFERENCES Materias(materia_id)
 );
