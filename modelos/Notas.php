@@ -34,4 +34,11 @@ class Notas extends Conexion{
         return $resultado;
     }
 
+    public function promedio($nota){
+        $sql = " SELECT * FROM notas WHERE nota_situacion = 1 AND nota = '$nota' ";
+        $resultado = self::servir($sql);
+        
+        return $resultado;
+    }
+
 }

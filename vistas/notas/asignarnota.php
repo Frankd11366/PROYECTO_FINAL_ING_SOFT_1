@@ -29,14 +29,16 @@ include_once '../../vistas/templates/header.php';
             <div class="col-12">
                 <input type="hidden" name="nota_alumno_id" id="nota_alumno_id" class="form-control" required value="<?= $AlumnoSeleccionado['alumno_id'] ?>">
             </div>
-            <div class="col-12">
+            <div class="col-4"></div>
+            <div class="col-4">
                 <label for="nombre">ALUMNO SELECCIONADO</label>
                 <input type="text" name="alumno_nombre" id="alumno_id" class="form-control" required value="<?= $AlumnoSeleccionado['alumno_nombre1'] . " " . $AlumnoSeleccionado['alumno_nombre2'] ?>" readonly>
             </div>
+            <div class="col-4"></div>
         </div>
         <div class="row mb-3">
             <div class="col-6 mb-3">
-                <label for="nota_materia_id">MATERIA</label>
+                <label for="nota_materia_id">SELECCIONE MATERIA</label>
                 <select id="nota_materia_id" name="nota_materia_id" class="form-control" required>
                     <option value="">SELECCIONE</option>
                     <?php foreach ($materias as $materia) : ?>
@@ -47,18 +49,16 @@ include_once '../../vistas/templates/header.php';
                 </select>
             </div>
             <div class="col-6">
-                <label for="nota">NOTA</label>
+                <label for="nota">ASIGNE NOTA </label>
                 <input type="number" name="nota" id="nota" class="form-control" required>
             </div>       
         </div>
-        <div class="row mb-3 p-5">
+        <div class="row m-3 p-5">
             <div class="col">
-                <button type="submit" class="btn btn-warning w-100">Guardar</button>
+                <button type="submit" class="btn btn-success w-100">Guardar</button>
             </div>
-        </div>
-        <div class="row">
             <div class="col">
-                <a href="../../controladores/notas/buscar.php" class="btn btn-secondary w-100">Cancelar</a>
+                <a href="../../controladores/notas/buscar.php" class="btn btn-danger w-100">Cancelar</a>
             </div>
         </div>
     </form>

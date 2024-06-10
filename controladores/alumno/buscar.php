@@ -68,7 +68,7 @@ include_once '../../vistas/templates/header.php'; ?>
                             <td><?= $alumno['alumno_nacionalidad'] ?></td>
                             <td class="text-center">
                                 <div class="dropdown">
-                                    <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Acciones
                                     </button>
                                     <ul class="dropdown-menu">
@@ -92,7 +92,7 @@ include_once '../../vistas/templates/header.php'; ?>
 </div>
 <div class="row mb-4 justify-content-center">
     <div class="col-lg-6">
-        <a href="../../vistas/alumnos/index.php" class="btn btn-primary w-100">Volver a Inicio</a>
+        <a href="../../vistas/alumnos/index.php" class="btn btn-warning w-100">Volver a Inicio</a>
     </div>
 </div>
 <?php include_once '../../vistas/templates/footer.php'; ?>

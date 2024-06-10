@@ -68,7 +68,7 @@ include_once '../../vistas/templates/header.php'; ?>
                 <button type="submit" class="btn btn-success w-100">GUARDAR</button>
             </div>
             <div class="col">
-                <a href="../../vistas/alumnos/buscar.php" class="btn btn-primary w-100">BUSCAR</a>
+                <a href="../../vistas/alumnos/index.php" class="btn btn-danger w-100">CANCELAR</a>
             </div>
         </div>
     </form>

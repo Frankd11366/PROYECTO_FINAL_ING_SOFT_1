@@ -1,13 +1,13 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 require '../../modelos/Alumnos.php';
 require '../../modelos/Materias.php';
 require '../../modelos/Notas.php';
-
+require '../../includes/funciones.php';
 
 
 try {
@@ -94,7 +94,6 @@ include_once '../../vistas/templates/header.php';
                             <td><?= $alumno['materia_nombre'] ?></td>
                             <td><?= $alumno['nota'] ?></td>
                             <td><?= $alumno['nota'] ?></td>
-
                         </tr>
                     <?php endforeach ?>
                 <?php else : ?>

@@ -17,12 +17,17 @@
     }
 
     body{
-        background-image: url(/src/images/background.jpg);
+        background-image: url(../../src/images/back.jpg);
         font-family: "Anton";
         font-size: 25px;
         text-align: center;
         padding: 30px;
     }
+    table, h1{
+        background-color: white;
+    }
+
+
 </style>
 
 <body>
