@@ -7,7 +7,6 @@
 require '../../modelos/Alumnos.php';
 require '../../modelos/Materias.php';
 require '../../modelos/Notas.php';
-require '../../includes/funciones.php';
 
 
 try {
@@ -16,6 +15,14 @@ try {
 
     $objAlumno = new Alumnos;
     $alumnos = $objAlumno->imprimir_nota($_GET['alumno_id']);
+
+    $nota_id = $_GET['alumno_id'];
+
+    $objNotas = new Notas;
+    $promedio = $objNotas->promedio($nota_id);
+    
+    // var_dump($promedio);
+    // exit;
 
     $resultado = [
         'mensaje' => 'Datos encontrados',
@@ -30,7 +37,7 @@ try {
     ];
 }
 
-// var_dump($alumnos);
+// var_dump($promedio);
 // exit;
 
 include_once '../../vistas/templates/header.php';
@@ -53,19 +60,18 @@ include_once '../../vistas/templates/header.php';
                     <th>Segundo Apellido</th>
                     <th>Grado</th>
                     <th>Arma o Servicio</th>
-
                 </tr>
             </thead>
             <tbody>
                 <?php if ($resultado['codigo'] == 1 && count($alumnos) > 0) : ?>
-                        <tr>
-                            <td><?= $alumnos[0]['alumno_nombre1'] ?></td>
-                            <td><?= $alumnos[0]['alumno_nombre2'] ?></td>
-                            <td><?= $alumnos[0]['alumno_apellido1'] ?></td>
-                            <td><?= $alumnos[0]['alumno_apellido2'] ?></td>
-                            <td><?= $alumnos[0]['alumno_grado'] ?></td>
-                            <td><?= $alumnos[0]['alumno_arma_o_servicio'] ?></td>
-                        </tr>
+                    <tr>
+                        <td><?= $alumnos[0]['alumno_nombre1'] ?></td>
+                        <td><?= $alumnos[0]['alumno_nombre2'] ?></td>
+                        <td><?= $alumnos[0]['alumno_apellido1'] ?></td>
+                        <td><?= $alumnos[0]['alumno_apellido2'] ?></td>
+                        <td><?= $alumnos[0]['alumno_grado'] ?></td>
+                        <td><?= $alumnos[0]['alumno_arma_o_servicio'] ?></td>
+                    </tr>
                 <?php else : ?>
                     <tr>
                         <th colspan="7">NO HAY ALUMNOS REGISTRADOS</th>
@@ -102,6 +108,15 @@ include_once '../../vistas/templates/header.php';
                     </tr>
                 <?php endif ?>
             </tbody>
+        </table>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>PROMEDIO</th>
+                    <td><?=$promedio['promedio']?></td>
+                </tr>
+            </thead>
         </table>
     </div>
 </div>

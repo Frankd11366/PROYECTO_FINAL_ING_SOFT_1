@@ -7,7 +7,7 @@ require '../../modelos/Alumnos.php';
 
 // consulta
 try {
-    // var_dump($_GET);
+    //var_dump($_GET);
     $_GET['alumno_nombre1'] = htmlspecialchars($_GET['alumno_nombre1']);
     $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido1']);
 
