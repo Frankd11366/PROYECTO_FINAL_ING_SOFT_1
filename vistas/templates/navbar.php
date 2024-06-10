@@ -35,7 +35,7 @@
                             <i class="bi bi-mortarboard-fill"></i></i>NOTAS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../controladores/notas/buscar.php"><i class="bi bi-pen"></i></i></i>INFORMACION NOTAS</a></li>
+                            <li><a class="dropdown-item" href="../../controladores/notas/buscar.php"><i class="bi bi-info-square-fill"></i></i>    INFORMACION NOTAS</a></li>
                         </ul>
                     </li>
             </div>

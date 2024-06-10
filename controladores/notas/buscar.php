@@ -69,6 +69,7 @@ include_once '../../vistas/templates/header.php'; ?>
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="../../vistas/notas/asignarnota.php?alumno_id=<?= base64_encode($alumno['alumno_id']) ?>"><i class="bi bi-pencil-fill"></i></i>  ASIGNAR NOTA</a></li>
+                                        <li><a class="dropdown-item" href="../../vistas/notas/modificar.php?alumno_id=<?= base64_encode($alumno['alumno_id']) ?>"><i class="bi bi-pencil-square"></i></i>  MODIFICAR NOTA</a></li>
                                         <li><a class="dropdown-item" href="../../vistas/notas/ver_calificaciones.php? alumno_id=<?= base64_encode($alumno['alumno_id']) ?>"><i class="bi bi-person-video2"></i></i>  VER LIBRETA DE CALIFICACIONES</a></li>
                                     </ul>
                                 </div>

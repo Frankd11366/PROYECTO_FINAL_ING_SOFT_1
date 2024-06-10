@@ -57,4 +57,35 @@ class Notas extends Conexion
 
         return $resultado;
     }
+
+
+    public function evaluarNota($nota_id)
+    {
+
+        $sql= "SELECT nota from notas inner join alumnos on alumno_id = nota_alumno_id where alumno_id = $nota_id AND nota_situacion = '1'";
+        $resultado = array_shift(self::servir($sql));
+
+        // var_dump($sql);
+        // exit;
+
+        
+        if ($resultado['nota'] >= '70') {
+            return 'Ganó';
+
+        } else {
+
+            return 'Perdió';
+        }
+    }
+
+
+    public function modificar()
+    {
+        $sql = "UPDATE notas SET nota = '$this->nota' WHERE nota_id = $this->nota_id ";
+        $resultado = $this->ejecutar($sql);
+        return $resultado; 
+    }
+
+
+
 }

@@ -20,10 +20,13 @@ try {
 
     $objNotas = new Notas;
     $promedio = $objNotas->promedio($nota_id);
-    
-    // var_dump($promedio);
-    // exit;
 
+    $objEstado = new Notas;
+    $estado = $objEstado->evaluarNota($nota_id);
+    
+    // var_dump($estado);
+    // exit;
+ 
     $resultado = [
         'mensaje' => 'Datos encontrados',
         'datos' => $alumnos,
@@ -74,7 +77,7 @@ include_once '../../vistas/templates/header.php';
                     </tr>
                 <?php else : ?>
                     <tr>
-                        <th colspan="7">NO HAY ALUMNOS REGISTRADOS</th>
+                        <th colspan="7">NO SE ENCONTRARON DATOS PARA MOSTRAR</th>
                     </tr>
                 <?php endif ?>
             </tbody>
@@ -99,12 +102,12 @@ include_once '../../vistas/templates/header.php';
                             <td><?= $key + 1 ?></td>
                             <td><?= $alumno['materia_nombre'] ?></td>
                             <td><?= $alumno['nota'] ?></td>
-                            <td><?= $alumno['nota'] ?></td>
+                            <td><?= $estado?></td>
                         </tr>
                     <?php endforeach ?>
                 <?php else : ?>
                     <tr>
-                        <th colspan="7">NO HAY ALUMNOS REGISTRADOS</th>
+                        <th colspan="7">NO SE ENCONTRARON DATOS PARA MOSTRAR</th>
                     </tr>
                 <?php endif ?>
             </tbody>
@@ -114,7 +117,7 @@ include_once '../../vistas/templates/header.php';
             <thead>
                 <tr>
                     <th>PROMEDIO</th>
-                    <td><?=$promedio['promedio']?></td>
+                    <tH><?=$promedio['promedio']?></tH>
                 </tr>
             </thead>
         </table>

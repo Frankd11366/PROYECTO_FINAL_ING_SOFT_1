@@ -8,13 +8,6 @@ $_POST['nota_materia_id'] = htmlspecialchars($_POST['nota_materia_id']);
 $_POST['nota'] = htmlspecialchars($_POST['nota']);
 
 
-
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-
-
 if ($_POST['nota_alumno_id'] == '' ||  $_POST['nota_materia_id'] == '' ||  $_POST['nota'] == '') {
     // ALERTA PARA VALIDAR DATOS
     $resultado = [
