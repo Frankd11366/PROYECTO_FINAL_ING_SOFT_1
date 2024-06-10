@@ -12,20 +12,22 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-file-person me-2"></i>ALUMNOS
+                            <i class="bi bi-file-person me-2"></i> ALUMNOS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../vistas/alumnos/index2.php"><i class="bi bi-person-plus-fill"></i></i> CREAR</a></li>
-                            <li><a class="dropdown-item" href="../../vistas/alumnos/buscar.php"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/alumnos/index2.php"><i class="bi bi-person-plus-fill"></i></i> REGISTRAR ALUMNO</a></li>
+                            <li><a class="dropdown-item" href="../../controladores/alumno/buscar.php"><i class="bi bi-person-lines-fill"></i></i> VER LISTADO DE ALUMNOS</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/alumnos/buscar.php"><i class="bi bi-search me-2"></i> BUSCAR ALUMNO</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-journals"></i></i>MATERIAS
+                            <i class="bi bi-journals"></i></i> MATERIAS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../vistas/materias/formulario.php"><i class="bi bi-journal-plus"></i></i>CREAR</a></li>
-                            <li><a class="dropdown-item" href="../../vistas/materias/buscar.php"><i class="bi bi-search me-2"></i>BUSCAR</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/materias/formulario.php"><i class="bi bi-journal-plus"></i></i> REGISTRAR MATERIA NUEVA</a></li>
+                            <li><a class="dropdown-item" href="../../controladores/materias/buscar.php"><i class="bi bi-card-list"></i></i> VER LISTADO DE MATERIAS</a></li>
+                            <li><a class="dropdown-item" href="../../vistas/materias/buscar.php"><i class="bi bi-search me-2"></i> BUSCAR MATERIA</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -33,7 +35,7 @@
                             <i class="bi bi-mortarboard-fill"></i></i>NOTAS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../../vistas/notas/index.php"><i class="bi bi-journal-plus"></i></i>ASIGNAR NOTAS</a></li>
+                            <li><a class="dropdown-item" href="../../controladores/notas/buscar.php"><i class="bi bi-pen"></i></i></i>ASIGNAR NOTAS</a></li>
                         </ul>
                     </li>
             </div>

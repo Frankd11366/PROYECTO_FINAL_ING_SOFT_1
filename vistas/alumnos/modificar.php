@@ -13,7 +13,7 @@ include_once '../../vistas/templates/header.php'; ?>
     <form action="../../controladores/alumno/modificar.php" method="POST" class="border bg-light shadow rounded p-2">
         <div class="row mb-3">
             <div class="col-12">
-                <input type="text" name="alumno_id" id="alumno_id" class="form-control" required value="<?= $AlumnoRegistrado['alumno_id'] ?>">
+                <input type="hidden" name="alumno_id" id="alumno_id" class="form-control" required value="<?= $AlumnoRegistrado['alumno_id'] ?>">
             </div>
             <div class="col-4">
                 <label for="alumno_nombre1">PRIMER NOMBRE</label>

@@ -2,19 +2,19 @@
 
 include_once '../../vistas/templates/header.php'; ?>
 
-<h1 class="text-center">BUSCAR ALUMNOS</h1>
+<h1 class="text-center">BUSCAR ALUMNO</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/alumno/buscar.php" method="GET" class="border bg-light shadow rounded p-4 col-lg-6">
         <div class="row mb-3">
             <div class="col">
                 <label for="alumno_nombre1">NOMBRE</label>
-                <input type="text" name="alumno_nombre1" id="alumno_nombre1" class="form-control" >
+                <input type="text" name="alumno_nombre1" id="alumno_nombre1" class="form-control" required >
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                 <label for="alumno_apellido1">APELLIDO</label>
-                <input type="text" name="alumno_apellido1" id="alumno_apellido1" class="form-control" >
+                <input type="text" name="alumno_apellido1" id="alumno_apellido1" class="form-control" required>
             </div>
         </div>
         

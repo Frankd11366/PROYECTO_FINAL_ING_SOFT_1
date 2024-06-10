@@ -9,7 +9,7 @@
         
         $eliminar = $alumno->eliminar();
         $resultado = [
-            'mensaje' => 'PRODUCTO ELIMINADO CORRECTAMENTE',
+            'mensaje' => 'ALUMNO ELIMINADO CORRECTAMENTE',
             'codigo' => 1
         ];
         

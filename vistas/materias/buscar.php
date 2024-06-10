@@ -8,7 +8,7 @@ include_once '../../vistas/templates/header.php'; ?>
         <div class="row mb-3">
             <div class="col">
                 <label for="materia_nombre">NOMBRE DE MATERIA</label>
-                <input type="text" name="materia_nombre" id="materia_nombre" class="form-control" >
+                <input type="text" name="materia_nombre" id="materia_nombre" class="form-control" required >
             </div>
         </div>        
         <div class="row">
