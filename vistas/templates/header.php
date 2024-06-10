@@ -27,6 +27,11 @@
         background-color: white;
     }
 
+    img{
+        border-radius: 30px;
+        box-shadow: orange;
+    }
+
 
 </style>
 

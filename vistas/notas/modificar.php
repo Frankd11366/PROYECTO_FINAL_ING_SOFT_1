@@ -12,8 +12,8 @@ $AlumnoRegistrado = $alumno->buscarId($_GET['alumno_id']);
 $materia = new Materias();
 $MateriaRegistrada = $materia->buscarId($_GET['materia_id']);
 
-var_dump($materia);
-exit;
+// var_dump($materia);
+// exit;
 
 include_once '../../vistas/templates/header.php'; ?>
 <h1 class="text-center">MODIFICAR NOTA DEL ALUMNO</h1>
