@@ -80,4 +80,14 @@ class Alumnos extends Conexion{
         $resultado = self::servir($sql);
         return $resultado;
     }
+
+    public function imprimir_nota($alumno_id){
+        $sql ="SELECT DISTINCT alumno_nombre1, alumno_nombre2, alumno_apellido1, alumno_apellido2, alumno_grado, alumno_arma_o_servicio,
+        alumno_nacionalidad, materia_nombre, nota  
+        from notas inner join alumnos on alumno_id = nota_alumno_id
+        inner join materias on nota_materia_id = materia_id where alumno_id = $alumno_id";
+        $resultado = self::servir($sql);
+        
+        return $resultado;
+    }
 }

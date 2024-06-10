@@ -50,7 +50,7 @@ include_once '../../vistas/templates/header.php'; ?>
                     <option value="Material de Guerra">Material de Guerra</option>
                     <option value="Policia Militar">Policia Militar</option>
                     <option value="Intendencia">Intendencia</option>
-                    <option value="Sanidad MIlitar">Sanidad MIlitar</option>
+                    <option value="Sanidad Militar">Sanidad Militar</option>
                 </select>
             </div>
         </div>
