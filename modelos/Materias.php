@@ -48,6 +48,8 @@ class Materias extends Conexion{
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
+
+    
     //BUSCAR EL ID PARA PODER MODIFICAR LOS DATOS
     public function buscarId($id){
         $sql = " SELECT * FROM Materias WHERE materia_situacion = 1 AND materia_id = '$id' ";

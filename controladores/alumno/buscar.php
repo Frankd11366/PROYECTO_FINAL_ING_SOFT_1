@@ -9,7 +9,7 @@ require '../../modelos/Alumnos.php';
 try {
     // var_dump($_GET);
     $_GET['alumno_nombre1'] = htmlspecialchars($_GET['alumno_nombre1']);
-    $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido2']);
+    $_GET['alumno_apellido1'] = htmlspecialchars($_GET['alumno_apellido1']);
 
     $objAlumno = new Alumnos($_GET);
     $alumnos = $objAlumno->buscar();

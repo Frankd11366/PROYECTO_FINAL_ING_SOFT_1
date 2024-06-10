@@ -9,12 +9,17 @@ require '../../modelos/Materias.php';
 
 
 $_GET['alumno_id'] = filter_var(base64_decode($_GET['alumno_id']), FILTER_SANITIZE_NUMBER_INT);
+$_GET['materia_id'] = filter_var(base64_decode($_GET['materia_id']), FILTER_SANITIZE_NUMBER_INT);
+
 
 $buscarId = new Alumnos;
 $AlumnoSeleccionado = $buscarId->buscarId($_GET['alumno_id']);
 
-$verMaterias = new Materias();
-$materias = $verMaterias->mostrarMaterias();
+$buscarId1 = new Materias;
+$MateriaSeleccionada = $buscarId1->buscarId($_GET['materia_id']);
+
+// $verMaterias = new Materias();
+// $materias = $verMaterias->mostrarMaterias();
 
 
 
@@ -22,30 +27,27 @@ include_once '../../vistas/templates/header.php';
 
 ?>
 
-<h1 class="text-center">ASIGNAR NOTA DEL ALUMNO</h1>
+<h1 class="text-center">LIBRETA DE CALIFICACIONES</h1>
 <div class="row justify-content-center">
     <form action="../../controladores/notas/guardar.php" method="POST" class="border bg-light shadow rounded p-4 col-lg-7">
         <div class="row mb-3">
             <div class="col-12">
-                <input type="hidden" name="nota_alumno_id" id="nota_alumno_id" class="form-control" required value="<?= $AlumnoSeleccionado['alumno_id'] ?>">
+                <input type="text" name="nota_alumno_id" id="nota_alumno_id" class="form-control" required value="<?= $AlumnoSeleccionado['alumno_id'] ?>">
+            </div>
+            <div class="col-12">
+                <input type="text" name="nota_materia_id" id="nota_materia_id" class="form-control" required value="<?= $MateriaSeleccionada['materia_id'] ?>">
             </div>
             <div class="col-12">
                 <label for="nombre">ALUMNO SELECCIONADO</label>
                 <input type="text" name="alumno_nombre" id="alumno_id" class="form-control" required value="<?= $AlumnoSeleccionado['alumno_nombre1'] . " " . $AlumnoSeleccionado['alumno_nombre2'] ?>" readonly>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-6 mb-3">
-                <label for="nota_materia_id">MATERIA</label>
-                <select id="nota_materia_id" name="nota_materia_id" class="form-control" required>
-                    <option value="">SELECCIONE</option>
-                    <?php foreach ($materias as $materia) : ?>
-                        <option value="<?= $materia['materia_id'] ?>">
-                            <?= $materia['materia_nombre'] . "" ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
+            <div class="col-12">
+                <label for="nombre">MATERIA SELECCIONADA</label>
+                <input type="text" name="materia_nombre" id="materia_id" class="form-control" required value="<?= $MateriaSeleccionada['materia_nombre'] ?>" readonly>
             </div>
+            
+        </div>
+      
             <div class="col-6">
                 <label for="nota">NOTA</label>
                 <input type="number" name="nota" id="nota" class="form-control" required>

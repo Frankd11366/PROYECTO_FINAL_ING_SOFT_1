@@ -74,4 +74,10 @@ class Alumnos extends Conexion{
         $resultado = $this->ejecutar($sql);
         return $resultado; 
     }
+
+    public function mostrarAlumnos(){
+        $sql ="SELECT * FROM Alumnos where alumno_situacion = 1";
+        $resultado = self::servir($sql);
+        return $resultado;
+    }
 }
